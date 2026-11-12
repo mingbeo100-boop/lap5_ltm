@@ -1,0 +1,10 @@
+# Mẫu file cấu hình cho Gmail (hoặc Localhost) - KHÔNG ghi mật khẩu thật vào Git/Source Code!
+# Sao chép file này thành `mail.properties` rồi điền App Password của bạn, sau đó bấm nút "Nạp mail.properties..." trên giao diện Client.
+mode=GMAIL
+email=ten_cua_ban@gmail.com
+password=
+smtp.host=smtp.gmail.com
+smtp.port=587
+pop3.host=pop.gmail.com
+pop3.port=995
+

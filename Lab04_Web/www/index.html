@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 04 — Cổng thông tin Web Server (HTTP/1.1)</title>
+    <style>
+        body { font-family: Segoe UI, Arial, sans-serif; background-color: #f8fafc; color: #1e293b; margin: 18px; }
+        h1 { color: #0f172a; margin-bottom: 6px; }
+        h2 { color: #1d4ed8; margin-top: 18px; }
+        .card { background-color: #ffffff; border: 1px solid #cbd5e1; padding: 14px; margin-top: 12px; }
+        table { border-collapse: collapse; width: 100%; background-color: #ffffff; margin-top: 8px; }
+        th, td { border: 1px solid #cbd5e1; padding: 8px; text-align: left; }
+        th { background-color: #e2e8f0; color: #0f172a; }
+        a { color: #2563eb; text-decoration: underline; font-weight: bold; }
+        code { background-color: #f1f5f9; padding: 2px 4px; font-family: Consolas, monospace; }
+    </style>
+</head>
+<body>
+    <h1>LAB 04 — JAVA HTTP WEB SERVER &amp; BROWSER</h1>
+    <p>Chào mừng bạn đến với máy chủ HTTP được xây dựng bằng <b>Java HttpServer</b> (<code>com.sun.net.httpserver.HttpServer</code>). Hãy nhấn vào các liên kết bên dưới hoặc dùng các nút <b>GET / HEAD / POST</b> trên trình duyệt Swing để kiểm thử.</p>
+
+    <div class="card">
+        <h2>Danh mục dịch vụ trên Web Server (Thư mục <code>www/</code>)</h2>
+        <table>
+            <tr>
+                <th>Tài nguyên</th>
+                <th>Đường dẫn (URL Path)</th>
+                <th>MIME Content-Type</th>
+                <th>Chức năng kiểm thử</th>
+            </tr>
+            <tr>
+                <td>Trang giới thiệu phụ</td>
+                <td><a href="/about.html">/about.html</a></td>
+                <td><code>text/html; charset=utf-8</code></td>
+                <td>Kiểm tra điều hướng link, nút Back / Forward</td>
+            </tr>
+            <tr>
+                <td>Dịch vụ PDF</td>
+                <td><a href="/tailieu.pdf">/tailieu.pdf</a></td>
+                <td><code>application/pdf</code></td>
+                <td>Xem trang PDF trực tiếp bằng PDFBox &amp; Download file</td>
+            </tr>
+            <tr>
+                <td>Dịch vụ MP3</td>
+                <td><a href="/nhac.mp3">/nhac.mp3</a></td>
+                <td><code>audio/mpeg</code></td>
+                <td>Nghe nhạc MP3 trực tiếp từ HTTP URL &amp; Download</td>
+            </tr>
+            <tr>
+                <td>Dịch vụ MP4</td>
+                <td><a href="/video.mp4">/video.mp4</a></td>
+                <td><code>video/mp4</code></td>
+                <td>Xem video MP4 (H.264/AAC) hỗ trợ HTTP Range &amp; Download</td>
+            </tr>
+            <tr>
+                <td>API nhận HTTP POST</td>
+                <td><a href="/api/submit">/api/submit</a></td>
+                <td><code>application/json; charset=utf-8</code></td>
+                <td>Nhấn nút <b>POST</b> để gửi dữ liệu form/JSON lên Server</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="card">
+        <h2>Hướng dẫn quan sát HTTP Header khi bảo vệ</h2>
+        <ul>
+            <li><b>GET</b>: Trình duyệt nhận đủ Status Code (<code>200 OK</code>), Response Headers và toàn bộ Body.</li>
+            <li><b>HEAD</b>: Server chỉ trả Status Code và Headers (kèm <code>Content-Length</code>), Body thực tế rỗng <code>0 bytes</code>.</li>
+            <li><b>POST</b>: Trình duyệt gửi chuỗi dữ liệu ở ô <i>POST Body</i> tới <code>/api/submit</code> và nhận phản hồi từ Server.</li>
+        </ul>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+@echo off
+pushd "%~dp0"
+echo Starting Lab 05 - RMI Server A (1099) ...
+set "MVN_CMD=mvn"
+where mvn >nul 2>nul
+if errorlevel 1 (
+  if exist "C:\opt\apache-maven-3.9.9\bin\mvn.cmd" (
+    set "MVN_CMD=C:\opt\apache-maven-3.9.9\bin\mvn.cmd"
+  ) else (
+    echo [ERROR] Maven (mvn) not found in PATH or C:\opt\apache-maven-3.9.9\bin\mvn.cmd
+    pause
+    popd
+    exit /b 1
+  )
+)
+call "%MVN_CMD%" compile exec:java "-Dexec.mainClass=com.ltm.lab05.SyncServerApp" "-Dexec.args=--role A"
+if errorlevel 1 pause
+popd

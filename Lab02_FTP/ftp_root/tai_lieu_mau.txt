@@ -1,0 +1,4 @@
+Lab 02 - Java FTP Server (Apache Mina FtpServer + SQLite)
+Tep mau nay nam trong thu muc goc ftp_root/ cua Lab02_FTP.
+Ban co the thu Download, Upload, Tao thu muc con va xem lich su trong SQLite.
+

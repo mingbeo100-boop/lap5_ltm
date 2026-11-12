@@ -1,0 +1,29 @@
+# Maven build artifacts
+target/
+**/target/
+
+# Local runtime SQLite databases & logs
+*.db
+*.db-shm
+*.db-wal
+*.log
+**/data/
+
+# Runtime downloaded/uploaded user files (preserve sample ftp_root file)
+Lab01_Chat/downloads/
+Lab02_FTP/downloads/
+Lab04_Web/downloads/
+Lab02_FTP/ftp_root/*
+!Lab02_FTP/ftp_root/tai_lieu_mau.txt
+
+# Local Mail credentials (never commit real App Passwords)
+Lab03_Mail/mail.properties
+**/mail.properties
+
+# IDE & OS metadata
+.idea/
+*.iml
+.vscode/
+.DS_Store
+Thumbs.db
+

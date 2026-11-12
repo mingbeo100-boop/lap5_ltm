@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu kiến trúc HTTP Lab 04</title>
+    <style>
+        body { font-family: Segoe UI, Arial, sans-serif; background-color: #f8fafc; color: #1e293b; margin: 18px; }
+        h1 { color: #0f766e; }
+        .box { background-color: #ffffff; border: 1px solid #cbd5e1; padding: 14px; margin-top: 12px; }
+        a { color: #2563eb; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>KIẾN TRÚC CLIENT / SERVER TRÊN NỀN HTTP/1.1</h1>
+    <div class="box">
+        <p>Trang này dùng để minh họa điều hướng đa trang, cập nhật bảng <b>History (SQLite)</b> và nút <b>Back / Forward / Refresh</b> trên Java Swing Browser.</p>
+        <ul>
+            <li><b>Server</b>: Lắng nghe TCP port mặc định <code>8080</code>, phục vụ tệp tĩnh từ thư mục <code>www/</code> và API <code>/api/submit</code>.</li>
+            <li><b>Client</b>: Dùng <code>java.net.http.HttpClient</code> gửi request HTTP thực thụ và hiển thị Status Code + Response Headers.</li>
+        </ul>
+        <p><a href="/index.html">← Quay lại Trang chủ (/index.html)</a></p>
+    </div>
+</body>
+</html>
+
